@@ -22,7 +22,6 @@ public class AudioManager : MonoBehaviour
         if (s != null && s.source != null)
         {
             s.source.Play();
-            Debug.Log(s.name);
 
         }
     }

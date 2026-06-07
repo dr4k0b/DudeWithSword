@@ -4,8 +4,13 @@ using UnityEngine.InputSystem;
 
 public class MovementController : MonoBehaviour
 {
+    [HideInInspector]
+    public Vector3 movement;
+    [HideInInspector]
+    public Vector3 turnTarget;
+
     private Vector2 moveDirection;
-    private Vector3 movement;
+    public Vector3 topView { get { return new Vector3(moveDirection.x, 0, moveDirection.y); } }
 
     private Rigidbody rb;
 
@@ -15,12 +20,19 @@ public class MovementController : MonoBehaviour
     public float acceleration;
     public float deacceleration;
 
+    public float turnTime;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = movement;
+        TurnPlayer(turnTarget);
+    }
 
     private void OnMove(InputValue context)
     {
@@ -29,7 +41,6 @@ public class MovementController : MonoBehaviour
 
     public void MoveBehaviour()
     {
-        Vector3 topView = new Vector3(moveDirection.x, 0, moveDirection.y);
 
         if (moveDirection.magnitude > 0.1f) //player gives input
         {
@@ -53,10 +64,14 @@ public class MovementController : MonoBehaviour
 
         if (movement.magnitude > 0.1f)
         {
-            transform.rotation = Quaternion.LookRotation(movement);
+            turnTarget = movement;
         }
 
         movement.y = rb.linearVelocity.y;
-        rb.linearVelocity = movement;
+    }
+
+    public void TurnPlayer(Vector3 target)
+    {
+        transform.rotation = Quaternion.LookRotation(Vector3.Lerp(transform.forward, target, turnTime));
     }
 }
