@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     public string target;
     public float hitStop;
     public float damage;
+    public float knockback;
 
     public Transform knockbackSource;
 
@@ -19,7 +20,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log(waiting);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +31,7 @@ public class Weapon : MonoBehaviour
             CameraShakeManager.instance.CameraShake(other.GetComponent<CinemachineImpulseSource>());
 
             other.GetComponent<Health>().Damage(damage);
-            other.GetComponent<Knockback>().setKnockback(knockbackSource.position, 5);
+            other.GetComponent<Knockback>().setKnockback(knockbackSource.position, knockback);
         }
     }
 

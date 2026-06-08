@@ -55,16 +55,16 @@ public class MovementController : MonoBehaviour
             movement = Vector3.zero;
         }
 
-        if (movement.magnitude > maxSpeed)
+        if (movement.magnitude > maxSpeed * topView.magnitude)
         {
-            movement = movement.normalized * maxSpeed;
+            movement = movement.normalized * maxSpeed * topView.magnitude;
         }
 
         Animations.SetFloat("Velocity", movement.magnitude / maxSpeed);
 
         if (movement.magnitude > 0.1f)
         {
-            turnTarget = movement;
+            turnTarget = topView.normalized;
         }
 
         movement.y = rb.linearVelocity.y;

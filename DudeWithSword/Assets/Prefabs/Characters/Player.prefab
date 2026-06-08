@@ -194,7 +194,7 @@ MonoBehaviour:
   maxSpeed: 5
   acceleration: 0.3
   deacceleration: 0.1
-  turnTime: 0.15
+  turnTime: 0.5
 --- !u!114 &1732811686269287222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 4644042227412722008}
   - component: {fileID: 7594173981726547860}
   - component: {fileID: 3003222364232465262}
+  - component: {fileID: 5353423027182126764}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -503,8 +504,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Swing
-    clip: {fileID: 0}
-    volume: 0.462
+    clip: {fileID: 8300000, guid: 4602740fd8f532a48a396080fd7e427f, type: 3}
+    volume: 1
     loop: 0
     source: {fileID: 0}
 --- !u!95 &3003222364232465262
@@ -529,6 +530,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5353423027182126764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6578474829002538678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6248a3611a80964f878edab9cdec2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::dynamicStepSound
+  movementController: {fileID: 1373332413125166300}
 --- !u!1 &8750349559917455705
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,4 +790,5 @@ MonoBehaviour:
   target: Enemy
   hitStop: 0.05
   damage: 0
+  knockback: 7
   knockbackSource: {fileID: 6080746122162563611}

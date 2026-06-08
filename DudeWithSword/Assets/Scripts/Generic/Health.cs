@@ -14,16 +14,18 @@ public class Health : MonoBehaviour
 
     private Material original;
     private MeshRenderer meshRenderer;
+    private AudioManager audioManager;
     void Start()
     {
         health = maxHealth;
         meshRenderer = GetComponent<MeshRenderer>();
+        audioManager = GetComponent<AudioManager>();
         original = meshRenderer.material;
     }
 
     void Update()
     {
-        if(health <= 0)
+        if (health <= 0)
         {
             Dead = true;
         }
@@ -34,6 +36,7 @@ public class Health : MonoBehaviour
         if (!Dead)
         {
             health -= damage;
+            audioManager.Play("Hit");
             StartCoroutine(hurtFlash());
         }
     }
