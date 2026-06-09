@@ -64,7 +64,7 @@ public class AttackController : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
 
         direction = transform.forward;
-        mc.turnTarget = mc.topView;
+        mc.turnTarget = mc.moveDirection;
         mc.movement = Vector3.zero;
 
         stateMachine.SetBool("Attack", true);

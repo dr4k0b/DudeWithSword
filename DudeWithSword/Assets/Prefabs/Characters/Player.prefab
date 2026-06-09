@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2342535555565329289}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   movement: {x: 0, y: 0, z: 0}
   turnTarget: {x: 0, y: 0, z: 0}
   Animations: {fileID: 3003222364232465262}
+  cameraDirection: {fileID: 0}
   maxSpeed: 5
   acceleration: 0.3
   deacceleration: 0.1
@@ -239,7 +240,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!81 &2342535555565329289
 AudioListener:
   m_ObjectHideFlags: 0
@@ -291,7 +292,6 @@ GameObject:
   - component: {fileID: 6194940550148751128}
   - component: {fileID: 6654849622742466059}
   - component: {fileID: 473943624093522242}
-  - component: {fileID: 559782817520868820}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -370,27 +370,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &559782817520868820
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5711803167516421245}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6578474829002538678
 GameObject:
   m_ObjectHideFlags: 0

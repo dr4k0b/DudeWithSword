@@ -9,12 +9,13 @@ public class MovementController : MonoBehaviour
     [HideInInspector]
     public Vector3 turnTarget;
 
-    private Vector2 moveDirection;
-    public Vector3 topView { get { return new Vector3(moveDirection.x, 0, moveDirection.y); } }
+    public Vector3 moveDirection { get; private set; }
 
     private Rigidbody rb;
 
     public Animator Animations;
+    public Transform cameraDirection;
+    public Transform orientation;
     [Header("Movement")]
     public float maxSpeed;
     public float acceleration;
@@ -36,7 +37,12 @@ public class MovementController : MonoBehaviour
 
     private void OnMove(InputValue context)
     {
-        moveDirection = context.Get<Vector2>();
+        Vector3 inputDirection = context.Get<Vector2>();
+        orientation.forward = (transform.position - new Vector3(cameraDirection.position.x, transform.position.y, cameraDirection.position.z)).normalized;
+
+
+        moveDirection = orientation.right * inputDirection.x + orientation.forward * inputDirection.y;
+
     }
 
     public void MoveBehaviour()
@@ -44,7 +50,7 @@ public class MovementController : MonoBehaviour
 
         if (moveDirection.magnitude > 0.1f) //player gives input
         {
-            movement += topView * acceleration;
+            movement += moveDirection * acceleration;
         }
         else if (movement.magnitude >= deacceleration)
         {
@@ -55,16 +61,16 @@ public class MovementController : MonoBehaviour
             movement = Vector3.zero;
         }
 
-        if (movement.magnitude > maxSpeed * topView.magnitude)
+        if (movement.magnitude > maxSpeed * moveDirection.magnitude)
         {
-            movement = movement.normalized * maxSpeed * topView.magnitude;
+            movement = movement.normalized * maxSpeed * moveDirection.magnitude;
         }
 
         Animations.SetFloat("Velocity", movement.magnitude / maxSpeed);
 
         if (movement.magnitude > 0.1f)
         {
-            turnTarget = topView.normalized;
+            turnTarget = moveDirection.normalized;
         }
 
         movement.y = rb.linearVelocity.y;
@@ -72,6 +78,6 @@ public class MovementController : MonoBehaviour
 
     public void TurnPlayer(Vector3 target)
     {
-        transform.rotation = Quaternion.LookRotation(Vector3.Lerp(transform.forward, target, turnTime));
+        transform.forward = Vector3.Lerp(transform.forward, target, turnTime);
     }
 }
