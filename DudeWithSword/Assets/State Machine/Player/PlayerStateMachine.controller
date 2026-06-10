@@ -17,8 +17,8 @@ MonoBehaviour:
   _useOnStateUpdate: 1
   _updateEventTag:
   - Move
-  _useOnStateExit: 0
-  _exitEventTag: 
+  _useOnStateExit: 1
+  _exitEventTag: MoveExit
 --- !u!1101 &-4778477556156561719
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

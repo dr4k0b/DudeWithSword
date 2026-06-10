@@ -144,6 +144,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - _tag: MoveExit
+    _event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1373332413125166300}
+          m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
+          m_MethodName: MoveExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - _tag: Dash
     _event:
       m_PersistentCalls:
@@ -192,9 +208,10 @@ MonoBehaviour:
   turnTarget: {x: 0, y: 0, z: 0}
   Animations: {fileID: 3003222364232465262}
   cameraDirection: {fileID: 0}
+  orientation: {fileID: 0}
   maxSpeed: 5
-  acceleration: 0.3
-  deacceleration: 0.1
+  acceleration: 0.5
+  deacceleration: 0.3
   turnTime: 0.5
 --- !u!114 &1732811686269287222
 MonoBehaviour:

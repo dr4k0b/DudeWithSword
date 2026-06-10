@@ -23,7 +23,7 @@ public class MovementController : MonoBehaviour
 
     public float turnTime;
 
-
+    private bool Moving;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,8 +31,13 @@ public class MovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = movement;
         TurnPlayer(turnTarget);
+
+        if (Moving)
+        {
+            Move();
+        }
+        rb.linearVelocity = movement;
     }
 
     private void OnMove(InputValue context)
@@ -45,12 +50,16 @@ public class MovementController : MonoBehaviour
 
     }
 
-    public void MoveBehaviour()
+    private void Move()
     {
-
-        if (moveDirection.magnitude > 0.1f) //player gives input
+        if (moveDirection.magnitude > 0.1f)
         {
             movement += moveDirection * acceleration;
+
+            if (movement.magnitude > maxSpeed * moveDirection.magnitude)
+            {
+                movement = movement.normalized * maxSpeed * moveDirection.magnitude;
+            }
         }
         else if (movement.magnitude >= deacceleration)
         {
@@ -61,11 +70,6 @@ public class MovementController : MonoBehaviour
             movement = Vector3.zero;
         }
 
-        if (movement.magnitude > maxSpeed * moveDirection.magnitude)
-        {
-            movement = movement.normalized * maxSpeed * moveDirection.magnitude;
-        }
-
         Animations.SetFloat("Velocity", movement.magnitude / maxSpeed);
 
         if (movement.magnitude > 0.1f)
@@ -74,6 +78,16 @@ public class MovementController : MonoBehaviour
         }
 
         movement.y = rb.linearVelocity.y;
+
+    }
+
+    public void MoveBehaviour()
+    {
+        Moving = true;
+    }
+    public void MoveExit()
+    {
+        Moving = false;
     }
 
     public void TurnPlayer(Vector3 target)
