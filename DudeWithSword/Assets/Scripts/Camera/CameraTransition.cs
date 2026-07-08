@@ -33,10 +33,10 @@ public class CameraTransition : MonoBehaviour
 
     private Vector3 offset()
     {
-        Vector3 side = new Vector3(Mathf.Cos(sideAngle * 2 * Mathf.PI), 0, Mathf.Sin(sideAngle * 2 * Mathf.PI));
-        Vector3 top = new Vector3(0, topAngle * 20, 0);
+        Vector3 side = new Vector3(Mathf.Cos(sideAngle * 2 * Mathf.PI) * Mathf.Cos(topAngle * (Mathf.PI / 2)), Mathf.Sin(topAngle * (Mathf.PI / 2)), Mathf.Sin(sideAngle * 2 * Mathf.PI) * Mathf.Cos(topAngle * (Mathf.PI / 2)));
+        Vector3 top = new Vector3(0, topAngle, 0);
 
-        return (side + top).normalized * distance;
+        return (side).normalized * distance;
     }
 
     private void OnTriggerEnter(Collider other)
