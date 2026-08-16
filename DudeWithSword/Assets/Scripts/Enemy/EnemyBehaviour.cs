@@ -6,9 +6,14 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public Animator stateMachine;
 
+    [Header("Idle")]
     public float idleRadius;
     public float detectRadius;
     public float idleWait;
+
+    [Header("Attack")]
+    public GameObject weapon;
+    public float attackTime;
 
     private Vector3 spawn;
 
@@ -39,7 +44,26 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Chase()
     {
+        //Raycast to see player
         agent.SetDestination(g.player.position);
+    }
+
+    public void AttackEnter()
+    {
+        agent.SetDestination(transform.position);
+    }
+    public void Attack()
+    {
+        stateMachine.SetBool("Attacking", true);
+        StartCoroutine(Attacking());
+    }
+    IEnumerator Attacking()
+    {
+        weapon.SetActive(true);
+        yield return new WaitForSeconds(attackTime);
+        weapon.SetActive(false);
+
+        stateMachine.SetBool("Attacking", false);
     }
 
     IEnumerator IdleWait()
@@ -51,7 +75,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (chase)
         {
             setPath = false;
-           yield break;
+            yield break;
         }
 
         agent.SetDestination(spawn + new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)) * Random.Range(0.0f, idleRadius));
