@@ -4488,6 +4488,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176656853}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &189198958
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -149.536
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
+      propertyPath: m_Name
+      value: PlaneRockPatch2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c57b909ef77b104a9a8dd9844b34ef4, type: 3}
 --- !u!1 &191831690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4771,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193024757}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &193394352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.511963
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -151.51546
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
+      propertyPath: m_Name
+      value: PlaneRockSingle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9dc8df3de6f544a49b8021719cc3a597, type: 3}
 --- !u!1 &195645882
 GameObject:
   m_ObjectHideFlags: 0
@@ -7947,6 +8061,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345341668}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &349300342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.568384
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -151.43434
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
+      propertyPath: m_Name
+      value: PlaneRockPatch3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7441b1352b600944587235bd92eafa4e, type: 3}
 --- !u!1 &350557757
 GameObject:
   m_ObjectHideFlags: 0
@@ -37026,6 +37197,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736333665}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1736967390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.574
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -149.39
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 344e9e961c89fda459deaaa230545230, type: 3}
+      propertyPath: m_Name
+      value: PlaneRockPatch1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 344e9e961c89fda459deaaa230545230, type: 3}
 --- !u!1 &1751746436
 GameObject:
   m_ObjectHideFlags: 0
@@ -46903,3 +47131,7 @@ SceneRoots:
   - {fileID: 1118701882}
   - {fileID: 212204880}
   - {fileID: 249683883}
+  - {fileID: 1736967390}
+  - {fileID: 189198958}
+  - {fileID: 349300342}
+  - {fileID: 193394352}
