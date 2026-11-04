@@ -25,6 +25,8 @@ public class CameraInformation : MonoBehaviour
             current.priority = false;
 
         current = transition;
+        followPlayer.offset = current.targetOffset;
+        followPlayer.lerp = current.trackingTargetTransition;
         current.priority = true;
     }
 }

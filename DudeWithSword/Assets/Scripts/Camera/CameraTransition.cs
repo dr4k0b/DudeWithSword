@@ -11,6 +11,9 @@ public class CameraTransition : MonoBehaviour
     public float distance;
 
     public float transition;
+    public float trackingTargetTransition = 0.1f;
+
+    public Vector3 targetOffset;
 
 
     public bool priority;
@@ -34,7 +37,6 @@ public class CameraTransition : MonoBehaviour
     private Vector3 offset()
     {
         Vector3 side = new Vector3(Mathf.Cos(sideAngle * 2 * Mathf.PI) * Mathf.Cos(topAngle * (Mathf.PI / 2)), Mathf.Sin(topAngle * (Mathf.PI / 2)), Mathf.Sin(sideAngle * 2 * Mathf.PI) * Mathf.Cos(topAngle * (Mathf.PI / 2)));
-        Vector3 top = new Vector3(0, topAngle, 0);
 
         return (side).normalized * distance;
     }
